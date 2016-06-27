@@ -12,12 +12,5 @@ dependencies:
 
 test:
     override:
-        - (./gradlew build assemble):
+        - (./gradlew build test):
             timeout: 360
-        # copy the data outputs to tests
-        - cp -r /home/ubuntu/Alexandria/data/build/test-results/ $CIRCLE_TEST_REPORTS/junit/
-        # copy the domain outputs to tests
-        - cp -r /home/ubuntu/Alexandria/domain/build/test-results/ $CIRCLE_TEST_REPORTS/junit/
-        # copy the app outputs to tests
-        - cp -r /home/ubuntu/Alexandria/app/build/test-results/debug/ $CIRCLE_TEST_REPORTS/junit/
-        - cp -r /home/ubuntu/Alexandria/app/build/test-results/release/ $CIRCLE_TEST_REPORTS/junit/
