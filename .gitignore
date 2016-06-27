@@ -1,12 +1,23 @@
+# Java class files
 *.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Generated files
+bin/
+gen/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# Gradle files
+.gradle/
+build/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# IntelliJ files
+.idea
+*.iml
+
+# Maven output folder
+target
+
+# Misc
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
