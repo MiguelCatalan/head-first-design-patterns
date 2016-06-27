@@ -2,6 +2,10 @@
 # Build configuration for Circle CI
 #
 
+general:
+    artifacts:
+        - /home/ubuntu/head-first-design-patterns/build/reports/
+
 machine:
     java:
         version: openjdk8
@@ -12,5 +16,7 @@ dependencies:
 
 test:
     override:
-        - (./gradlew build test):
+        - (./gradlew check test):
             timeout: 360
+        # copy the data outputs to tests
+        - cp -r /home/ubuntu/head-first-design-patterns/build/test-results/ $CIRCLE_TEST_REPORTS/junit/
