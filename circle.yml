@@ -1,0 +1,23 @@
+#
+# Build configuration for Circle CI
+#
+
+machine:
+    java:
+        version: openjdk8
+
+dependencies:
+    override:
+        - ./gradlew dependencies
+
+test:
+    override:
+        - (./gradlew build assemble):
+            timeout: 360
+        # copy the data outputs to tests
+        - cp -r /home/ubuntu/Alexandria/data/build/test-results/ $CIRCLE_TEST_REPORTS/junit/
+        # copy the domain outputs to tests
+        - cp -r /home/ubuntu/Alexandria/domain/build/test-results/ $CIRCLE_TEST_REPORTS/junit/
+        # copy the app outputs to tests
+        - cp -r /home/ubuntu/Alexandria/app/build/test-results/debug/ $CIRCLE_TEST_REPORTS/junit/
+        - cp -r /home/ubuntu/Alexandria/app/build/test-results/release/ $CIRCLE_TEST_REPORTS/junit/

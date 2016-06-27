@@ -1,0 +1,15 @@
+group 'Head First Design Patterns'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply from: './check.gradle'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
