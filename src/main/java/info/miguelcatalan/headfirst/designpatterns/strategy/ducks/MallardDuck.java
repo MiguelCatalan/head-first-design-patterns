@@ -4,9 +4,9 @@ import info.miguelcatalan.headfirst.designpatterns.strategy.Duck;
 import info.miguelcatalan.headfirst.designpatterns.strategy.fly.FlyWithWings;
 import info.miguelcatalan.headfirst.designpatterns.strategy.quack.Quack;
 
-public class MallardDuck extends Duck {
+class MallardDuck extends Duck {
 
-    public MallardDuck() {
+    MallardDuck() {
         flyBehaviour = new FlyWithWings();
         quackBehaviour = new Quack();
     }

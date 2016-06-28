@@ -2,8 +2,8 @@ package info.miguelcatalan.headfirst.designpatterns.strategy;
 
 public abstract class Duck {
 
-    public FlyBehaviour flyBehaviour;
-    public QuackBehaviour quackBehaviour;
+    protected FlyBehaviour flyBehaviour;
+    protected QuackBehaviour quackBehaviour;
 
     public void setFlyBehaviour(FlyBehaviour flyBehaviour) {
         this.flyBehaviour = flyBehaviour;
