@@ -3,7 +3,7 @@ A repository containing all the Head First Design Patterns exercises
 
 # Patterns
 - [Strategy](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/strategy/ducks)
-- Observer
+- [Observer](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/observer)
 - [Decorator](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/decorator)
 - Factory
 - Singleton
