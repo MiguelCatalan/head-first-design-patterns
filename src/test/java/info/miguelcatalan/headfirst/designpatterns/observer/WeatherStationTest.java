@@ -15,7 +15,6 @@ public class WeatherStationTest {
 
         WeatherData weatherData = new WeatherData();
         CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
-        
         weatherData.setMeasurements(TEMPERATURE, HUMIDITY, PRESSURE);
 
         assertEquals(TEMPERATURE, currentConditionsDisplay.getTemperature(), 0);
