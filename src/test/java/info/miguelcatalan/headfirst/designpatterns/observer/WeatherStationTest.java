@@ -14,12 +14,13 @@ public class WeatherStationTest {
         final float PRESSURE = 30.4f;
 
         WeatherData weatherData = new WeatherData();
-
         CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
-
+        
         weatherData.setMeasurements(TEMPERATURE, HUMIDITY, PRESSURE);
 
         assertEquals(TEMPERATURE, currentConditionsDisplay.getTemperature(), 0);
+        assertEquals(HUMIDITY, currentConditionsDisplay.getHumidity(), 0);
+        assertEquals(PRESSURE, currentConditionsDisplay.getPressure(), 0);
     }
 
     @Test
@@ -28,6 +29,8 @@ public class WeatherStationTest {
         final float HUMIDITY = 65;
         final float PRESSURE = 30.4f;
         final float NEW_TEMPERATURE = 85;
+        final float NEW_HUMIDITY = 66;
+        final float NEW_PRESSURE = 36.4f;
 
         WeatherData weatherData = new WeatherData();
         CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
@@ -37,5 +40,7 @@ public class WeatherStationTest {
         weatherData.setMeasurements(NEW_TEMPERATURE, HUMIDITY, PRESSURE);
 
         assertNotEquals(NEW_TEMPERATURE, currentConditionsDisplay.getTemperature(), 0);
+        assertNotEquals(NEW_HUMIDITY, currentConditionsDisplay.getHumidity(), 0);
+        assertNotEquals(NEW_PRESSURE, currentConditionsDisplay.getPressure(), 0);
     }
 }

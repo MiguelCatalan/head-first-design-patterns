@@ -5,7 +5,7 @@ class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float humidity;
     private float pressure;
 
-    public CurrentConditionsDisplay(Subject subject) {
+    CurrentConditionsDisplay(Subject subject) {
         subject.registerObserver(this);
     }
 
