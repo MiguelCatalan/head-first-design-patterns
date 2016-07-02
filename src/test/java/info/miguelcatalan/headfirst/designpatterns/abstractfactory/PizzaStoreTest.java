@@ -63,6 +63,44 @@ public class PizzaStoreTest {
         assertTrue(chicagoStyleVeggiePizza.getIngredients().containsAll(rightIngredients));
     }
 
+    @Test
+    public void shouldOrderANYStyleCheesePizza() {
+        PizzaStore nyPizzaStore = new NYPizzaStore();
+        Pizza nyStyleCheesePizza = nyPizzaStore.orderPizza("cheese");
+
+        assertEquals("NY Style Cheese pizza", nyStyleCheesePizza.getName());
+    }
+
+    @Test
+    public void shouldANYStyleCheesePizzaContainsTheRightIngredients() {
+        PizzaStore nyPizzaStore = new NYPizzaStore();
+        Pizza nyStyleCheesePizza = nyPizzaStore.orderPizza("cheese");
+
+
+        List<String> rightIngredients = new ArrayList<String>();
+        rightIngredients.add("ThinCrustDough");
+        rightIngredients.add("ReggianoCheese");
+        assertTrue(nyStyleCheesePizza.getIngredients().containsAll(rightIngredients));
+    }
+
+    @Test
+    public void shouldOrderAChicagoStyleCheesePizza() {
+        PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+        Pizza chicagoStyleCheesePizza = chicagoPizzaStore.orderPizza("cheese");
+
+        assertEquals("Chicago Style Cheese pizza", chicagoStyleCheesePizza.getName());
+    }
+
+    @Test
+    public void shouldAChicagoStyleCheesePizzaContainsTheRightIngredients() {
+        PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+        Pizza chicagoStyleCheesePizza = chicagoPizzaStore.orderPizza("cheese");
+
+        List<String> rightIngredients = new ArrayList<String>();
+        rightIngredients.add("ThickCrustDough");
+        rightIngredients.add("MozzarellaCheese");
+
+        assertTrue(chicagoStyleCheesePizza.getIngredients().containsAll(rightIngredients));
     }
 
 }
