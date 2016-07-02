@@ -1,6 +1,5 @@
 package info.miguelcatalan.headfirst.designpatterns.abstractfactory.pizzas;
 
-import com.sun.deploy.util.StringUtils;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.ingredients.Cheese;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.ingredients.Clams;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.ingredients.Dough;
@@ -31,7 +30,7 @@ public abstract class Pizza {
         this.name = name;
     }
 
-    public String getIngredients() {
+    public List<String> getIngredients() {
         List<String> ingredients = new ArrayList<String>();
         if (dough != null) {
             ingredients.add(dough.getName());
@@ -59,6 +58,6 @@ public abstract class Pizza {
             ingredients.add(clams.getName());
         }
 
-        return StringUtils.join(ingredients, ", ");
+        return ingredients;
     }
 }

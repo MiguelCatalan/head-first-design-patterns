@@ -1,5 +1,6 @@
 package info.miguelcatalan.headfirst.designpatterns.abstractfactory.stores;
 
+import info.miguelcatalan.headfirst.designpatterns.abstractfactory.pizzas.CheesePizza;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.pizzas.Pizza;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.ingredientfactories.PizzaIngredientFactory;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.PizzaStore;
@@ -15,6 +16,9 @@ public class NYPizzaStore extends PizzaStore {
         if ("veggie".equals(type)) {
             pizza = new VeggiePizza(ingredientFactory);
             pizza.setName("NY Style Veggie pizza");
+        } else if ("cheese".equals(type)) {
+            pizza = new CheesePizza(ingredientFactory);
+            pizza.setName("NY Style Cheese pizza");
         }
 
         return pizza;

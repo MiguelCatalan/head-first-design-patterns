@@ -1,14 +1,15 @@
 package info.miguelcatalan.headfirst.designpatterns.abstractfactory;
 
-import info.miguelcatalan.headfirst.designpatterns.abstractfactory.stores.ChicagoPizzaStore;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.pizzas.Pizza;
+import info.miguelcatalan.headfirst.designpatterns.abstractfactory.stores.ChicagoPizzaStore;
 import info.miguelcatalan.headfirst.designpatterns.abstractfactory.stores.NYPizzaStore;
-import org.hamcrest.CoreMatchers;
-import org.junit.Assert;
 import org.junit.Test;
 
-import static org.hamcrest.core.StringContains.containsString;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class PizzaStoreTest {
 
@@ -26,13 +27,15 @@ public class PizzaStoreTest {
         PizzaStore nyPizzaStore = new NYPizzaStore();
         Pizza nyStyleVeggiePizza = nyPizzaStore.orderPizza("veggie");
 
-        Assert.assertThat(nyStyleVeggiePizza.getIngredients(), CoreMatchers.allOf(
-                containsString("ThinCrustDough"),
-                containsString("ReggianoCheese"),
-                containsString("Garlic"),
-                containsString("Mushroom"),
-                containsString("RedPepper"),
-                containsString("Onion")));
+        List<String> rightIngredients = new ArrayList<String>();
+        rightIngredients.add("ThinCrustDough");
+        rightIngredients.add("ReggianoCheese");
+        rightIngredients.add("Garlic");
+        rightIngredients.add("Mushroom");
+        rightIngredients.add("RedPepper");
+        rightIngredients.add("Onion");
+
+        assertTrue(nyStyleVeggiePizza.getIngredients().containsAll(rightIngredients));
     }
 
     @Test
@@ -48,13 +51,18 @@ public class PizzaStoreTest {
         PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
         Pizza chicagoStyleVeggiePizza = chicagoPizzaStore.orderPizza("veggie");
 
-        Assert.assertThat(chicagoStyleVeggiePizza.getIngredients(), CoreMatchers.allOf(
-                containsString("ThickCrustDough"),
-                containsString("MozzarellaCheese"),
-                containsString("Garlic"),
-                containsString("Mushroom"),
-                containsString("RedPepper"),
-                containsString("Onion")));
+
+        List<String> rightIngredients = new ArrayList<String>();
+        rightIngredients.add("ThickCrustDough");
+        rightIngredients.add("MozzarellaCheese");
+        rightIngredients.add("Garlic");
+        rightIngredients.add("Mushroom");
+        rightIngredients.add("RedPepper");
+        rightIngredients.add("Onion");
+
+        assertTrue(chicagoStyleVeggiePizza.getIngredients().containsAll(rightIngredients));
+    }
+
     }
 
 }
