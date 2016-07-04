@@ -29,6 +29,8 @@ public class CeilingFanMediumCommand implements Command {
             case OFF:
                 ceilingFan.off();
                 break;
+            default:
+                ceilingFan.off();
         }
     }
 }
