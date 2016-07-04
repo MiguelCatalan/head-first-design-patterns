@@ -1,0 +1,35 @@
+package info.miguelcatalan.headfirst.designpatterns.command.fan;
+
+import info.miguelcatalan.headfirst.designpatterns.command.Command;
+
+public class CeilingFanHighCommand implements Command {
+
+    private final CeilingFan ceilingFan;
+    private CeilingFan.State previousState;
+
+    public CeilingFanHighCommand(CeilingFan ceilingFan) {
+        this.ceilingFan = ceilingFan;
+    }
+
+    public void execute() {
+        previousState = ceilingFan.getCurrentState();
+        ceilingFan.high();
+    }
+
+    public void undo() {
+        switch (previousState) {
+            case HIGH:
+                ceilingFan.high();
+                break;
+            case MEDIUM:
+                ceilingFan.medium();
+                break;
+            case LOW:
+                ceilingFan.low();
+                break;
+            case OFF:
+                ceilingFan.off();
+                break;
+        }
+    }
+}
