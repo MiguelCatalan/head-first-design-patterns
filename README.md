@@ -8,7 +8,8 @@ A repository containing all the Head First Design Patterns exercises
 - [Abstract Factory](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/abstractfactory)
 - [Singleton](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/singleton)
 - [Command](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/command)
-- Adapter and Facade
+- [Adapter](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/adapter)
+- Facade
 - Template
 - Iterator and Composite
 - State
