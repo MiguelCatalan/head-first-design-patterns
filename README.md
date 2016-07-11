@@ -13,7 +13,7 @@ A repository containing all the Head First Design Patterns exercises
 - [Template](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/template)
 - [Iterator](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/iterator)
 - [Composite](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/composite)
-- State
+- [State](https://github.com/MiguelCatalan/head-first-design-patterns/tree/master/src/test/java/info/miguelcatalan/headfirst/designpatterns/state)
 - Proxy
 - Compound
 
